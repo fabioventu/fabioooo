@@ -1,0 +1,30 @@
+
+
+{{title}}
+<!--Centriamo la mappa alle nostre coordinate-->
+<agm-map [latitude]="lat" [longitude]="lng">
+<agm-polygon [paths]="triangle" [fillColor]="'red'">
+</agm-polygon>
+
+  <!--Mettiamo un marker alle nostre coordinate-->
+  <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="icon"   >
+  </agm-marker>
+  <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="icon1"   >
+  </agm-marker>
+  <agm-marker [latitude]="lat" [longitude]="lng"  [iconUrl]="icon2"   >
+  </agm-marker>
+
+  <agm-circle [latitude]="lat" [longitude]="lng"
+      [radius]="5000"
+      [fillColor]="'black'">
+  </agm-circle>
+  <agm-circle [latitude]="lat" [longitude]="lng"
+      [radius]="90000"
+      [fillColor]="'white'">
+  </agm-circle>
+
+</agm-map>
+<button (click)="onClickRed()"> cerchio rosso </button>
+<button (click)="onClickGreen()"> cerchio verde </button>
+<button (click)="onClickYellow()"> cerchio giallo</button>
+
